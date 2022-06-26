@@ -1,0 +1,26 @@
+Recipe1:
+    user:
+    password:
+    email:
+    difficulty:
+    duration: 
+    ingredients:
+        name: 
+        quantity: 
+        
+    instructions:
+        Halve each chicken breast,
+        Heat olive oil in a skillet on high heat until very hot, about 1 minute,
+        Reduce heat to medium and cook chicken through, seasoning both sides generously with salt and pepper,
+        Set chicken aside,
+        Melt margarine in the skillet, stir in flour and chicken broth and heat until simmering,
+        Stir in green onions and chile powder,
+        Add chicken to skillet and heat until warm
+
+    name: Chipotle Gravy Chicken
+    notes: 
+    tags:
+        Comfort,
+        Dinner,
+        Safe,
+        Vegetarian

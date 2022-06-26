@@ -1,0 +1,205 @@
+{
+    "Recipe": {
+        "name": "Chipotle Gravy Chicken",
+        "difficulty": "Low",
+        "duration": "2 hours",
+        "ingredients": [{
+                "name": "Chicken",
+                "quantity": "2 breasts"
+            },
+            {
+                "name": "Chicken Broth",
+                "quantity": "3/4 cup"
+            },
+            {
+                "name": "Chile Powder",
+                "quantity": "1/2 tsp"
+            },
+            {
+                "name": "Flour",
+                "quantity": "1 tbsp"
+            },
+            {
+                "name": "Green Onion",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Margarine",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Olive Oil",
+                "quantity": "1 tbsp"
+            }
+        ],
+        "instructions": [
+            "Halve each chicken breast",
+            "Heat olive oil in a skillet on high heat until very hot, about 1 minute",
+            "Reduce heat to medium and cook chicken through, seasoning both sides generously with salt and pepper",
+            "Set chicken aside",
+            "Melt margarine in the skillet, stir in flour and chicken broth and heat until simmering",
+            "Stir in green onions and chile powder",
+            "Add chicken to skillet and heat until warm"
+        ],
+        "notes": [],
+        "tags": [
+            "Comfort",
+            "Dinner",
+            "Safe",
+            "Vegetarian"
+        ]
+    },
+    "Recipe1": {
+        "name": "Spicy Chicken Nuggets",
+        "difficulty": "Low",
+        "duration": "1 hours",
+        "ingredients": [{
+                "name": "Chicken",
+                "quantity": "1.5 lbs thighs"
+            },
+            {
+                "name": "Ground Chipotle Pepper",
+                "quantity": "1/2 tsp"
+            },
+            {
+                "name": "Margarine",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "Panko Bread Crumbs",
+                "quantity": "1.5 cups"
+            },
+            {
+                "name": "Parmesan Cheese",
+                "quantity": "1.5 cups, grated"
+            }
+        ],
+        "instructions": [
+            "Mix bread crumbs, cheese, and pepper in a bowl",
+            "Put melted margarine in another bowl, dip chicken in margarine and then coat with crumb mixture",
+            "Place chicken in a greased baking pan and sprinkle with remaining crumbs",
+            "Bake at 400F until cooked through, about 20 minutes"
+        ],
+        "notes": [],
+        "tags": [
+            "Comfort",
+            "Dinner",
+            "Spicy"
+        ]
+    },
+    "Recipe2": {
+        "name": "Split Pea Soup",
+        "difficulty": "Low",
+        "duration": "2 hours",
+        "ingredients": [{
+                "name": "Bay Leaf",
+                "quantity": "1"
+            },
+            {
+                "name": "Carrot",
+                "quantity": "2"
+            },
+            {
+                "name": "Cayenne",
+                "quantity": "1 dash"
+            },
+            {
+                "name": "Celery",
+                "quantity": "2 stalks"
+            },
+            {
+                "name": "Marjoram",
+                "quantity": "1/4 tsp"
+            },
+            {
+                "name": "Onion",
+                "quantity": "1"
+            },
+            {
+                "name": "Split Peas",
+                "quantity": "2 cups"
+            },
+            {
+                "name": "Thyme",
+                "quantity": "1/4 tsp"
+            },
+            {
+                "name": "Water",
+                "quantity": "2 quarts"
+            }
+        ],
+        "instructions": [
+            "Mix all ingredients together",
+            "Cover and cook slowly for about 1 hour, until peas are very soft",
+            "Force through coarse sieve",
+            "Return to heat and bring to a boil"
+        ],
+        "notes": [],
+        "tags": [
+            "Comfort",
+            "Dinner",
+            "Safe",
+            "Soup",
+            "Vegan",
+            "Vegetarian"
+        ]
+    },
+    "Recipe3": {
+        "name": "Stuffing",
+        "difficulty": "Low",
+        "duration": "1 hours",
+        "ingredients": [{
+                "name": "Celery",
+                "quantity": "3 stalks"
+            },
+            {
+                "name": "Chicken Broth",
+                "quantity": "Ask Colleen"
+            },
+            {
+                "name": "Egg",
+                "quantity": "2"
+            },
+            {
+                "name": "Margarine",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "Onion",
+                "quantity": "2"
+            },
+            {
+                "name": "Potato",
+                "quantity": "3"
+            },
+            {
+                "name": "Poultry Seasoning",
+                "quantity": "To taste"
+            },
+            {
+                "name": "Sage",
+                "quantity": "To taste"
+            },
+            {
+                "name": "Sandwich Bread",
+                "quantity": "2 loaves"
+            }
+        ],
+        "instructions": [
+            "Dice celery and onions, and sautee one day prior. Save celery leaves",
+            "Peel, boil, and cube the potatoes. Set aside some potato water",
+            "Cube the sandwich loaf and roast at 250F until crisp on the outside, but still soft inside",
+            "Combine bread, potatoes, onions, celery, and leaves",
+            "Add eggs, potato water, chicken broth, poultry seasoning, salt, pepper, and sage",
+            "Stir and adjust seasonings to taste (should look greenish from the seasonings)",
+            "Coat a baking dish with margarine and add stuffing. Add 2 tbsp margarine on top",
+            "Cover with foil and bake for 1 hr at 350F, uncovering for the last 10 minutes"
+        ],
+        "notes": [],
+        "tags": [
+            "Comfort",
+            "Side",
+            "Vegetarian"
+        ]
+    }
+}

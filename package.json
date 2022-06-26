@@ -1,0 +1,40 @@
+{
+    "name": "cse-341-application",
+    "version": "1.0.0",
+    "description": "GraphQL Server with NodeJS, Express and MongoDb",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "start:dev": "nodemon app.js",
+        "swagger-autogen": "node ./swagger.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JermainLopez/cse-341-application.git"
+    },
+    "author": "Jermain Lopez",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JermainLopez/cse-341-application/issues"
+    },
+    "homepage": "https://github.com/JermainLopez/cse-341-application#readme",
+    "dependencies": {
+        "@hapi/joi": "^17.1.1",
+        "apollo-server": "^3.9.0",
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "express-graphql": "^0.12.0",
+        "express-validator": "^6.14.2",
+        "graphql": "^15.8.0",
+        "joi": "^17.6.0",
+        "joi-password-complexity": "^5.1.0",
+        "mongoose": "^6.4.0",
+        "swagger-ui-express": "^4.4.0"
+    },
+    "devDependencies": {
+        "swagger-autogen": "^2.21.3"
+    }
+}

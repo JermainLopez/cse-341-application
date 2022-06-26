@@ -1,0 +1,26 @@
+###
+GET http://localhost:8080/authors
+
+###
+GET http://localhost:8080/authors/62b64728664f858682dd7b9e
+
+
+###
+PUT http://localhost:8080/authors/62b64728664f858682dd7b9e
+
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "lastname": "Lisandro",
+    "email": "john@gmail.com"
+}
+
+### 
+POST http://localhost:8080/authors
+
+{
+    "name": "John Doe",
+    "lastname": "Lisandro",
+    "email": "joh@gmail.com"
+}

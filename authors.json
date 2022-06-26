@@ -1,0 +1,114 @@
+{
+    "author": {
+        "username": "johndoe",
+        "name": "John Doe",
+        "lastname": "Doe",
+        "email": "john@gmail.com",
+        "password": "123456",
+        "phone": "123456789",
+        "address": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "eperience": [{
+                "cookExperienceYears": "1",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "2",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "3",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "4",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            }
+        ]
+    },
+    "author2": {
+        "username": "marialoren",
+        "name": "Maria loren",
+        "lastname": "Herrera",
+        "email": "maria@gmail.com",
+        "password": "123456",
+        "phone": "123456789",
+        "address": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "eperience": [{
+                "cookExperienceYears": "1",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "2",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "3",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            },
+            {
+                "cookExperienceYears": "4",
+                "cookingStyles": "Italian",
+                "currentlyCooking": "Yes",
+                "foodPreferences": "Italian",
+                "dateEstarted": "01/01/2019",
+                "dateEfinished": "01/01/2019",
+                "jodposition": "Cook",
+                "companyName": "ABC Company",
+                "companyAddress": "123 Main St"
+            }
+        ]
+    }
+}
