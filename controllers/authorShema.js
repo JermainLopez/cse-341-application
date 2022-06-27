@@ -1,7 +1,5 @@
-const mongodb = require('../db/connect');
 const db = require('../models');
-const ObjectId = require('mongodb').ObjectId;
-const { Autror } = db.author;
+const Author = db.author;
 const passwordUtil = require('../utils/checkpassword');
 
 const createAuthor = async(req, res) => {
@@ -27,22 +25,25 @@ const createAuthor = async(req, res) => {
 
 const getAllAuthors = async(req, res) => {
     try {
-        // #swagger.description = 'Display all the Recipes in the database';
-        const result = await mongodb.getDb().db().collection('authors').find();
-        result.toArray().then((lists) => {
-            res.setHeader('Content-Type', 'application/json');
-            res.status(200).json(lists);
-        });
+        Author.find({})
+            .then((data) => {
+                res.status(200).send(data);
+            })
+            .catch((err) => {
+                res.status(500).send({
+                    message: err.message || 'Some error occurred while retrieving users.'
+                });
+            });
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(500).json(err);
     }
 
-}
+};
 
 const getSingleAuthor = async(req, res) => {
     try {
         const username = req.params.username;
-        Autror.findOne({ username: username }, (err, author) => {
+        Author.findOne({ username: username }, (err, author) => {
             if (err) {
                 res.status(500).json(err || 'Author not found');
             } else {
@@ -67,7 +68,7 @@ const updateAuthor = async(req, res) => {
             res.status(400).send({ message: passwordCheck.error });
             return;
         }
-        Autror.findOne({ username: username }, (err, author) => {
+        Author.findOne({ username: username }, (err, author) => {
             author.username = req.body.username;
             author.name = req.body.name;
             author.email = req.body.email;

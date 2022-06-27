@@ -3,7 +3,6 @@ const mongodb = require('./db/connect');
 const bodyParser = require('body-parser');
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
-const { URL } = require('./db/connect');
 const port = process.env.PORT || 8080;
 const app = express();
 
@@ -41,16 +40,12 @@ mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     } else {
-        const mongoose = require('mongoose');
-        mongoose.connect(URL)
-        mongoose.connection.once('open', () => {
-            console.log('conneted to database');
-        });
         const db = require('./models');
         db.mongoose
             .connect(db.url, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
+
             })
             .then(() => {
                 app.listen(port, () => {
