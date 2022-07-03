@@ -39,7 +39,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         store: MongoDbStore.create({
-            mongoUrl: 'mongodb+srv://JermainLopez:Honduras1234@cluster0.ckaz6.mongodb.net/test'
+            mongoUrl: process.env.MONGODB_URI,
         })
     })
 )
