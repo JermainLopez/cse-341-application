@@ -1,39 +1,28 @@
-module.exports = (mongoose) => {
-    const authorSchema = mongoose.Schema({
-        username: {
-            type: String
-        },
-        name: {
-            type: String
-        },
-        lastname: {
-            type: String
-        },
-        email: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        password: {
-            type: Date
-        },
-        phone: {
-            type: String
-        },
-        address: {
-            type: String
-        },
-        city: {
-            type: String
-        },
-        state: {
-            type: String
-        },
-        eperience: [{
-            type: String
-        }]
+const mongoose = require('mongoose')
 
-    });
-
-    return mongoose.model('authors', authorSchema);
-};
+const AuthorSchema = new mongoose.Schema({
+    googleId: {
+        type: String,
+        required: true,
+    },
+    displayName: {
+        type: String,
+        required: true,
+    },
+    firstName: {
+        type: String,
+        required: true,
+    },
+    lastName: {
+        type: String,
+        required: true,
+    },
+    image: {
+        type: String,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+})
+module.exports = mongoose.model('Author', AuthorSchema)

@@ -1,0 +1,54 @@
+<h3>Add Recipe</h3>
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <form action="/recipes" method="POST">
+                    <div class="input-fiel">
+                        <select id="stauts" name="status">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                        <label for="status">Status</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" name="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="input-fiel">
+                        <select id="dificulty" name="difficulty">
+                            <option value="hard">Hard</option>
+                            <option value="medium">Medium</option>
+                            <option value="low" >Low</option>
+                        </select>
+                        <label for="difficulty"></label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="duration" name="duration" type="text" class="validate">
+                            <label for="duration">Duration</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <h5>List of Ingredients:</h5>
+                            <textarea id="ingredients" name="ingredients"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <h5>Especial Instructions:</h5>
+                            <textarea id="instructions" name="instructions"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Save" class="btn  teal darken-4">
+                        <a href="/dashboard" class="btn black">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
