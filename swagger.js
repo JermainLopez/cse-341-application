@@ -5,7 +5,7 @@ const doc = {
         title: 'Recipes API',
         description: 'Recipes API with Swagger by Jermain Lopez'
     },
-    host: 'dashboard.heroku.com/apps/cse341-recipe-book-whith-autho',
+    host: 'cse-personal-assigment8.herokuapp.com',
     schemes: ['https']
 };
 
