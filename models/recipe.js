@@ -1,33 +1,36 @@
-module.exports = (mongoose) => {
-    const recipeSchema = mongoose.Schema({
-        name: {
-            type: String
-        },
-        difficulty: {
-            type: String
-        },
-        duration: {
-            type: String
-        },
-        ingredients: {
-            type: [
-                String
-            ]
-        },
-        instructions: {
-            type: [
-                String
-            ]
-        },
-        notes: {
-            type: Array
-        },
-        tags: {
-            type: [
-                String
-            ]
-        }
-    });
+const mongoose = require('mongoose')
 
-    return mongoose.model('recipes', recipeSchema);
-};
+const RecipeSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    difficulty: {
+        type: String
+    },
+    duration: {
+        type: String
+    },
+    ingredients: {
+        type: String
+    },
+    instructions: {
+        type: String
+    },
+    status: {
+        type: String,
+        default: 'public',
+        enum: ['public', 'private']
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Author'
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+})
+
+module.exports = mongoose.model('Recipe', RecipeSchema)
