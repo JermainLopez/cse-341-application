@@ -8,7 +8,7 @@ dotenv.config({ path: './config/config.env' })
 module.exports = function(passport) {
     passport.use(
         new GoogleStrategy({
-                clientID: '218395047531-q8524das29rk4485dddaea819htibrvh.apps.googleusercontent.com',
+                clientID: '218395047531-p8t2clqkt5v2dllq013526k5mi89ibid.apps.googleusercontent.com',
                 clientSecret: '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',
                 callbackURL: '/auth/google/callback'
             },
