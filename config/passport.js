@@ -1,6 +1,6 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const mongoose = require('mongoose')
-const User = require('../models/User')
+const Author = require('../models/Author')
     //new change
 const dotenv = require('dotenv')
 dotenv.config({ path: './config/config.env' })
@@ -13,7 +13,7 @@ module.exports = function(passport) {
                 callbackURL: '/auth/google/callback'
             },
             async(accessToken, refreshToken, profile, done) => {
-                const newUser = {
+                const newAuthor = {
                     googleId: profile.id,
                     displayName: profile.displayName,
                     firstName: profile.name.givenName,
@@ -22,13 +22,13 @@ module.exports = function(passport) {
                 }
 
                 try {
-                    let user = await User.findOne({ googleId: profile.id })
+                    let author = await Author.findOne({ googleId: profile.id })
 
-                    if (user) {
-                        done(null, user)
+                    if (author) {
+                        done(null, author)
                     } else {
-                        user = await User.create(newUser)
-                        done(null, user)
+                        author = await Author.create(newAuthor)
+                        done(null, author)
                     }
                 } catch (err) {
                     console.error(err)
@@ -43,7 +43,7 @@ module.exports = function(passport) {
 
     passport.deserializeUser(async(id, done) => {
         try {
-            const user = await User.findById(id)
+            const user = await Author.findById(id)
             done(null, user)
         } catch (err) {
             console.error(err)

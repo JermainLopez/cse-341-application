@@ -7,7 +7,8 @@ const exphbs = require('express-handlebars')
 const passport = require('passport')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongo')
-
+const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 //config my passport
 require('./config/passport')(passport)
@@ -22,7 +23,13 @@ connectDB()
 //Add body parser to parse the body of the request
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-    // Logging
+
+//Suager
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// Logging
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
@@ -60,5 +67,5 @@ const PORT = process.env.PORT || 8080
 
 app.listen(
     PORT,
-    console.log(`Server running in port ${PORT}`)
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 )
