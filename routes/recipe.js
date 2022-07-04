@@ -34,8 +34,15 @@ router.get('/', ensureAuthenticated, async(req, res) => {
     }
 })
 
-
-
-
+//delite Recipe by id
+router.delete('/:id', ensureAuthenticated, async(req, res) => {
+    try {
+        await Recipe.findByIdAndDelete(req.params.id)
+        res.redirect('/dashboard')
+    } catch (err) {
+        console.error(err)
+        res.render('geterror/error500')
+    }
+})
 
 module.exports = router

@@ -25,7 +25,7 @@ const RecipeSchema = new mongoose.Schema({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Author'
+        ref: 'User'
     },
     createdAt: {
         type: Date,

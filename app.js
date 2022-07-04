@@ -7,8 +7,7 @@ const exphbs = require('express-handlebars')
 const passport = require('passport')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongo')
-const mongoose = require('mongoose')
-const methodOverride = require('method-override')
+
 
 //config my passport
 require('./config/passport')(passport)
@@ -39,7 +38,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         store: MongoDbStore.create({
-            mongoUrl: process.env.MONGODB_URI,
+            mongoUrl: 'mongodb+srv://JermainLopez:Honduras1234@cluster0.ckaz6.mongodb.net/test'
         })
     })
 )
@@ -61,5 +60,5 @@ const PORT = process.env.PORT || 8080
 
 app.listen(
     PORT,
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+    console.log(`Server running in port ${PORT}`)
 )

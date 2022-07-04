@@ -1,0 +1,29 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Recipes API",
+    "description": "Recipes API with Swagger by Jermain Lopez",
+    "version": "1.0.0"
+  },
+  "host": "dashboard.heroku.com/apps/cse341-recipe-book-whith-autho",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/dashboard": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  }
+}
