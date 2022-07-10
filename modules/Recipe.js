@@ -23,9 +23,9 @@ const RecipeSchema = new mongoose.Schema({
         default: 'public',
         enum: ['public', 'private']
     },
-    author: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Author'
+        ref: 'User'
     },
     createdAt: {
         type: Date,

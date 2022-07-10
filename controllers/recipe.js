@@ -24,7 +24,7 @@ router.post('/', ensureAuthenticated, async(req, res) => {
 
 router.get('/', ensureAuthenticated, async(req, res) => {
     try {
-        const recipes = await Recipe.find({ status: 'public' }).populate('user').sort({ createdAt: 'desc' }).lean()
+        const recipes = await Recipe.find({ status: 'public' }).populate('recipes').sort({ createdAt: 'desc' }).lean()
         res.render('recipes/index', {
             recipes: recipes,
         })

@@ -8,12 +8,11 @@ const passport = require('passport')
 const session = require('express-session')
 const MongoDbStore = require('connect-mongo')
 const mongoose = require('mongoose')
-const methodOverride = require('method-override')
 
 //config my passport
-require('./config/passport')(passport)
+require('./config/password')(passport)
     // Load config variables
-dotenv.config({ path: './config/config.env' })
+dotenv.config()
 
 //Start app
 const app = express()
@@ -28,7 +27,7 @@ app.use(express.json())
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 // Logging
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
@@ -45,7 +44,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         store: MongoDbStore.create({
-            mongoUrl: 'mongodb+srv://JermainLopez:Honduras1234@cluster0.ckaz6.mongodb.net/test'
+            mongoUrl: process.env.MONGODB_URI,
         })
     })
 )
@@ -53,6 +52,7 @@ app.use(
 //set passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+
 
 //My static folder
 app.use(express.static(path.join(__dirname, 'public')))
@@ -62,6 +62,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', require('./routes/index'))
 app.use('/auth', require('./routes/auth'))
 app.use('/recipes', require('./routes/recipe'))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const PORT = process.env.PORT || 8080
 

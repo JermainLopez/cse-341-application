@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const { ensureAuthenticated, ensureAuthor } = require('../software/soft')
+const { ensureAuthenticated, ensureAuthor } = require('../software/software')
 
 //Recipes routes
-const Recipe = require('../models/Recipe')
+const Recipe = require('../modules/Recipe')
 
 router.get('/', ensureAuthor, (req, res) => {
     res.render('login', {

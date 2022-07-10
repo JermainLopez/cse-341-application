@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const AuthorSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     googleId: {
         type: String,
         required: true,
@@ -25,4 +25,5 @@ const AuthorSchema = new mongoose.Schema({
         default: Date.now,
     },
 })
-module.exports = mongoose.model('Author', AuthorSchema)
+
+module.exports = mongoose.model('User', UserSchema)
