@@ -12,30 +12,48 @@ router.get('/add', ensureAuthenticated, (req, res) => {
 
 //Post Recipe into de database
 router.post('/', ensureAuthenticated, async(req, res) => {
-    try {
-        req.body.user = req.user.id
-        await Recipe.create(req.body)
-        res.redirect('/dashboard')
-    } catch (err) {
-        console.error(err.message)
-        res.redirect('geterror/error500')
-    }
-})
-
+        try {
+            req.body.user = req.user.id
+            await Recipe.create(req.body)
+            res.redirect('/dashboard')
+        } catch (err) {
+            console.error(err.message)
+            res.redirect('geterror/error500')
+        }
+    })
+    //Get recipes from the database
 router.get('/', ensureAuthenticated, async(req, res) => {
-    try {
-        const recipes = await Recipe.find({ status: 'public' }).populate('recipes').sort({ createdAt: 'desc' }).lean()
-        res.render('recipes/index', {
-            recipes: recipes,
+        try {
+            const recipes = await Recipe.find({ status: 'public' }).populate('recipes').sort({ createdAt: 'desc' }).lean()
+            res.render('recipes/index', {
+                recipes: recipes,
+            })
+        } catch (err) {
+            console.error(err)
+            res.render('geterror/error500')
+        }
+    })
+    //Delete recipe from the database
+router.delete('/:id', ensureAuthenticated, async(req, res) => {
+        try {
+            await Recipe.findByIdAndDelete(req.params.id)
+            res.redirect('/dashboard')
+        } catch (err) {
+            console.error(err)
+            res.render('geterror/error500')
+        }
+    })
+    //Edit recipe
+router.get('/edit/:id', ensureAuthenticated, async(req, res) => {
+            try {
+                const recipe = await Recipe.findById(req.params.id)
+                res.render('recipes/edit', {
+                    recipe: recipe
+                })
+            } catch (err) {
+                console.error(err)
+                res.render('geterror/error500')
+            }
         })
-    } catch (err) {
-        console.error(err)
-        res.render('geterror/error500')
-    }
-})
-
-
-
-
 
 module.exports = router
